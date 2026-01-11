@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Love+Light&family=Lovers+Quarrel&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    text-align:center;
+    background-color: #0E21A0;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.hi{
+    background-color:#4D2FB2;
+    padding: 200px;
+    border-radius: 20px;
+    margin-top: 80px;
+}
+
+.hi input{
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    width: 420px;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-size: 24px;
+}
+
+.hi button{
+    padding: 20px;
+    border:none;
+    border-radius: 20px;
+    width:420px;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    font-size: 24px;
+    color:#F375C2 ;
+}
+
+.hi button:hover{
+    background-color:#0E21A0;
+    cursor: pointer;
+}
