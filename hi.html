@@ -2,72 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello my senior</title>
+    <title>Hello My Senior</title>
     <link rel="stylesheet" href="hi.css">
 </head>
 <body>
 
-<div class="hi">
+<div class="container">
+    <h1>🎲 Pick a Number (1–9)</h1>
+
     <form id="numberForm">
-        <input 
-            type="number" 
-            id="number" 
-            placeholder="Please mam input a number"
-            min="1"
-            max="9"
-            required
-        >
-        <br><br>
-        <button type="submit">
-            Push down Autometa 🤣
-        </button>
+        <input type="number" id="number" min="1" max="9" placeholder="Type 1 to 9 😏">
+        <button type="submit">Push Down Autometa 😈</button>
     </form>
 </div>
 
+<!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-box">
+        <span class="close" onclick="closePopup()">×</span>
+        <h2 id="popupTitle">💌 Message</h2>
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">OK 😎</button>
+    </div>
+</div>
+
 <script>
-document.getElementById("numberForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // stop form submit
+document.getElementById("numberForm").addEventListener("submit", function(e){
+    e.preventDefault();
 
     const number = document.getElementById("number").value;
-    let message = "";
+    let msg = "";
 
-    if (number === "") {
-        message = "Please mam input a number";
+    if(number === ""){
+        msg = "ফাঁকা রাখলে চলবে না ম্যাডাম 😒";
     }
-    else if (number == 1) {
-        message = "Hey mam you are so cute 😒😒😒";
+    else if(number == 1){
+        msg = "আপনি এত কিউট কেন? ❤️😒";
     }
-    else if (number == 2) {
-        message = "Porashunar obostha khub i kharap apnar 🙅‍♂️🙅‍♂️🙅‍♂️🙅‍♂️";
+    else if(number == 2){
+        msg = "পড়াশোনার অবস্থা দেখলে বইও কাঁদে 📚😭";
     }
-    else if (number == 3) {
-        message = "Screen Time komate hobe 📉📉📉📉";
+    else if(number == 3){
+        msg = "মোবাইল নামাও, জীবন উঠাও 📱⬇️";
     }
-    else if (number == 4) {
-        message = "Apni Thik moto khawa dawa koren na ❌❌❌";
+    else if(number == 4){
+        msg = "খাওয়া-দাওয়া ঠিক না করলে আমিই খাইয়ে দেব 🍔😌";
     }
-    else if (number == 5) {
-        message = "এইভাবে চলতে থাকলে অলস হয়ে যাবেন 🦥🦥🦥";
+    else if(number == 5){
+        msg = "এইভাবে চললে অলসতার ব্র্যান্ড অ্যাম্বাসেডর হবেন 🦥😎";
     }
-    else if (number == 6) {
-        message = "আমি জানি আপনি ৬ লিখবেন না, লিখলে ধন্যবাদ 😁😁😁";
+    else if(number == 6){
+        msg = "জানি ৬ লিখবেন না… তাও ধন্যবাদ 😁❤️";
     }
-    else if (number == 7) {
-        message = "আমি অনেক স্লো 🦥🦥🦥🦥🦥🦥";
+    else if(number == 7){
+        msg = "আপনি slow না, cinematic slow 😌🎬";
     }
-    else if (number == 8) {
-        message = "কেরাম, লুডু আমার সাথে পারবেন না 🏸🏸🏸";
+    else if(number == 8){
+        msg = "কেরাম-লুডু? আমার কাছে হার নিশ্চিত 😏🏸";
     }
-    else if (number == 9) {
-        message = "আপনি আসলেই কিউট 😻😻😻😻😻";
+    else if(number == 9){
+        msg = "Warning ⚠️: Extra Cute Detected 😻🔥";
     }
-    else {
-        message = "৯ এর মধ্যে ইনপুট দিবা 😒😒😒";
+    else{
+        msg = "১–৯ এর বাইরে গেলে আমার মন খারাপ হয় 😒";
     }
 
-    alert(message);
-    document.getElementById("numberForm").reset();
+    document.getElementById("popupMessage").innerText = msg;
+    document.getElementById("popup").classList.add("show");
 });
+
+function closePopup(){
+    document.getElementById("popup").classList.remove("show");
+    document.getElementById("numberForm").reset();
+}
 </script>
 
 </body>
